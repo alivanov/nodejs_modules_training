@@ -1,10 +1,7 @@
-console.log('hello from 1');
+const app = {};
+module.exports = app;
 
-module.exports = {
-  foo1() {
-    console.log('Hello from Foo!');
-  },
-  test1() {
-    console.log(module);
-  },
-};
+// require app from a test will not start the server
+if (!module.parent) {
+  app.listen(process.env.PORT || 3000);
+}
