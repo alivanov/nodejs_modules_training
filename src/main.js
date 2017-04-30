@@ -1,3 +1,10 @@
-import lodash from 'lodash';
+console.log('hello from 1');
 
-global.console.log('hello', lodash);
+module.exports = {
+  foo1() {
+    console.log('Hello from Foo!');
+  },
+  test1() {
+    console.log(module);
+  },
+};
